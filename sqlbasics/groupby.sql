@@ -1,0 +1,25 @@
+-- USE OF GROUP BY AND ALIAS(USED TO WRITE COLUMN NAME) AND COUNT
+
+/*
+-- FIND TOTAL SCORE FOR EACH COUNTRY
+SELECT 
+	country,
+	SUM(score)		--HERE WHEN YOU RUN JusT THIS CODE THE FINAL ANSWER COLUMN WILL HAVE NO NAME I.E. (NO COLUMN NAME) SO USE ALIAS
+FROM customers
+GROUP BY country
+
+
+SELECT 
+	country,
+	SUM(score)	AS total_score	
+FROM customers
+GROUP BY country
+*/
+
+--FIND TOTAL SCORE AND TOTAL NUMBER OF CUSTOMERS FOR EACH COUNTRY
+SELECT 
+	country,
+	SUM(score)	AS total_score,
+	COUNT(id) AS total_customers
+FROM customers
+GROUP BY country
