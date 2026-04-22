@@ -1,4 +1,4 @@
--- Get employee name with department name
+-- Get employee name with department names
 SELECT e.name, d.department_name
 FROM employees e
 INNER JOIN departments d
